@@ -15,3 +15,8 @@ To execute the script, run the following command in your terminal:
 ```sh
 node App.js
 ```
+
+### Screenshots
+
+![Executed code](/screenshots/1.png)
+![Slack img](/screenshots/2.png)
