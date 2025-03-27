@@ -7,14 +7,39 @@ const input = readline.createInterface({
   output: process.stdout,
 });
 
-const env = loadEnvVariables();
+const loadEnv = () => {
+  const env = loadEnvVariables();
+  if (!env) {
+    console.error("Environment variables not loaded!");
+    process.exit(1);
+  }
+  return env;
+};
 
-if (!env) {
-  console.error("Environment variables not loaded!");
-  process.exit(1);
-}
+const getUserInput = () => {
+  return new Promise((resolve) => {
+    input.question("Please Enter the search keyword: ", (searchQuery) => {
+      input.close();
+      resolve(searchQuery);
+    });
+  });
+};
 
-input.question("Please Enter the search keyword: ", (searchQuery) => {
-  input.close();
-  fetchYoutubeAPI(searchQuery, env);
-});
+const main = async () => {
+  const env = loadEnv();
+
+  try {
+    const searchQuery = await getUserInput();
+    if (!searchQuery.trim()) {
+      console.error("Search query cannot be empty!");
+      return;
+    }
+
+    console.log(`Searching for: ${searchQuery}`);
+    await fetchYoutubeAPI(searchQuery, env);
+  } catch (error) {
+    console.error("An error occurred:", error);
+  }
+};
+
+main();
