@@ -10,6 +10,7 @@ This task was completed using only built-in **Node.js** libraries, without relyi
 - Used ES Modules.
 - Enviroment variable loader was writen by myself
 - For fetching data from the API, the built-in `fetch` module was used.
+- Not provided .env file in the github repository.
 
 ## How to Run the Script
 
