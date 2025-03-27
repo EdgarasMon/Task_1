@@ -6,7 +6,10 @@ This task was completed using only built-in **Node.js** libraries, without relyi
 
 ## Prerequisites
 
-- Ensure that **Node.js** is installed on your machine.
+- Node version 18.20.7 was used.
+- Used ES Modules.
+- Enviroment variable loader was writen by myself
+- For fetching data from the API, the built-in `fetch` module was used.
 
 ## How to Run the Script
 

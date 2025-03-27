@@ -45,4 +45,4 @@ const sendDataToSlackChannel = async (data, env, searchQuery) => {
   }
 };
 
-module.exports = sendDataToSlackChannel;
+export default sendDataToSlackChannel;

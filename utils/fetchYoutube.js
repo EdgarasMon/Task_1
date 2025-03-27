@@ -1,4 +1,4 @@
-const sendDataToSlackChannel = require("./sendDataToSlackChannel");
+import sendDataToSlackChannel from "./sendDataToSlackChannel.js";
 
 const fetchYoutubeAPI = async (searchQuery, env) => {
   if (searchQuery.trim() !== "") {
@@ -28,4 +28,4 @@ const fetchYoutubeAPI = async (searchQuery, env) => {
   }
 };
 
-module.exports = fetchYoutubeAPI;
+export default fetchYoutubeAPI;

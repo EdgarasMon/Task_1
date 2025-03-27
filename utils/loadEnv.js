@@ -1,4 +1,4 @@
-const fs = require("fs");
+import fs from "fs";
 
 const loadEnvVariables = () => {
   const envFile = "./.env";
@@ -22,4 +22,4 @@ const loadEnvVariables = () => {
   }
 };
 
-module.exports = loadEnvVariables;
+export default loadEnvVariables;

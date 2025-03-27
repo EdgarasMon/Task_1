@@ -1,6 +1,6 @@
-const readline = require("readline");
-const loadEnvVariables = require("./utils/loadEnv.js");
-const fetchYoutubeAPI = require("./utils/fetchYoutube.js");
+import readline from "readline";
+import loadEnvVariables from "./utils/loadEnv.js";
+import fetchYoutubeAPI from "./utils/fetchYoutube.js";
 
 const input = readline.createInterface({
   input: process.stdin,
